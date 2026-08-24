@@ -174,8 +174,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 32px;display:f
 .tariff-cloud{display:flex;flex-wrap:wrap;gap:8px}
 .tariff-tag{position:relative;cursor:pointer}
 .tariff-tag input{position:absolute;opacity:0;width:0;height:0}
-.tariff-tag span{display:inline-block;padding:9px 15px;border:1px solid var(--border-w);border-radius:20px;font-size:12.5px;color:var(--muted-w);transition:all .2s}
-.tariff-tag input:checked+span{background:var(--gold);border-color:var(--gold);color:var(--black);font-weight:700}
+.tariff-tag span{display:inline-block;padding:10px 18px;border:1.5px solid var(--gold-d);border-radius:20px;font-size:12.5px;font-weight:600;color:var(--gold-l);background:rgba(212,169,71,.08);transition:all .2s}
+.tariff-tag:hover span{border-color:var(--gold);background:rgba(212,169,71,.16)}
+.tariff-tag input:checked+span{background:linear-gradient(100deg,var(--gold-d),var(--gold),var(--gold-l));border-color:var(--gold-l);color:var(--black);font-weight:800;box-shadow:0 0 0 3px rgba(212,169,71,.25)}
+.pain-cloud{display:flex;flex-wrap:wrap;gap:8px}
+.pain-tag{position:relative;cursor:pointer}
+.pain-tag input{position:absolute;opacity:0;width:0;height:0}
+.pain-tag span{display:inline-block;padding:10px 16px;border:1px solid var(--border-w);border-radius:20px;font-size:12.5px;color:var(--muted-w);transition:all .2s}
+.pain-tag:hover span{border-color:var(--gold)}
+.pain-tag input:checked+span{background:var(--gold);border-color:var(--gold);color:var(--black);font-weight:700}
 .form-success{display:none;text-align:center;padding:40px 10px}
 .form-success.show{display:block}
 .form-success .check{font-size:38px;color:var(--gold);margin-bottom:14px}
@@ -673,7 +680,15 @@ footer a:hover{color:var(--gold-l)}
           </div>
           <div class="form-row">
             <label>Что сейчас самое сложное в личном бренде? *</label>
-            <textarea name="pain" rows="2" required placeholder="Кратко, тезисно"></textarea>
+            <div class="pain-cloud">
+              <label class="pain-tag"><input type="checkbox" name="pain_socials" value="Вести соцсети"><span>Вести соцсети</span></label>
+              <label class="pain-tag"><input type="checkbox" name="pain_speak" value="Выступать публично"><span>Выступать публично</span></label>
+              <label class="pain-tag"><input type="checkbox" name="pain_camera" value="Работать на камеру"><span>Работать на камеру</span></label>
+              <label class="pain-tag"><input type="checkbox" name="pain_media" value="Попасть в СМИ"><span>Попасть в СМИ</span></label>
+              <label class="pain-tag"><input type="checkbox" name="pain_blog" value="Вести блог"><span>Вести блог</span></label>
+              <label class="pain-tag"><input type="checkbox" name="pain_position" value="Позиционирование и УТП"><span>Позиционирование и УТП</span></label>
+              <label class="pain-tag"><input type="checkbox" name="pain_strategy" value="Стратегия развития бренда"><span>Стратегия развития бренда</span></label>
+            </div>
           </div>
           <button type="submit" class="form-submit">Отправить заявку</button>
           <div class="form-note">Ответ придёт вам на почту. Проверьте.</div>
@@ -703,6 +718,10 @@ footer a:hover{color:var(--gold-l)}
 document.getElementById('mdForm').addEventListener('submit', function(e){
   e.preventDefault();
   var form=e.target;
+  if(!form.querySelector('input[name^="pain_"]:checked')){
+    alert('Отметьте хотя бы один пункт: что сейчас самое сложное в личном бренде?');
+    return;
+  }
   var data=new FormData(form);
   data.append('_subject','Заявка — Медийность и деньги');
   var btn=form.querySelector('.form-submit');
