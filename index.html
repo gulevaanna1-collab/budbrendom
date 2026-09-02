@@ -177,14 +177,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 32px;display:f
 .cases{padding:130px 0;background:var(--black-2);color:#fff}
 .cases-head{text-align:center;max-width:640px;margin:0 auto}
 .cases-head h2{font-size:clamp(28px,3.6vw,42px);color:#fff;margin-top:16px}
-.case-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:56px}
-.case-card{background:var(--black-3);border:1px solid var(--border-w);border-radius:4px;padding:30px 28px}
-.case-head{display:flex;gap:16px;align-items:center;margin-bottom:16px}
-.case-avatar{width:56px;height:56px;border-radius:50%;flex-shrink:0;overflow:hidden;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;background:rgba(201,164,92,.12)}
-.case-avatar img{width:100%;height:100%;object-fit:cover}
-.case-avatar-ph{font-family:'Playfair Display',serif;font-size:18px;font-weight:800;color:var(--gold-l)}
-.case-name{font-family:'Playfair Display',serif;font-size:17px;font-weight:800;color:#fff}
-.case-role{font-size:12.5px;color:var(--muted-w);margin-top:2px}
+.case-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:56px}
+.case-card{background:var(--black-3);border:1px solid var(--border-w);border-radius:6px;overflow:hidden}
+.case-photo{width:100%;aspect-ratio:4/5;overflow:hidden;background:var(--black)}
+.case-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.case-body{padding:24px 26px 28px}
+.case-name{font-family:'Playfair Display',serif;font-size:19px;font-weight:800;color:#fff}
+.case-role{font-size:13px;color:var(--muted-w);margin-top:3px;margin-bottom:16px}
 .case-headline{font-size:14.5px;color:var(--gold-l);font-style:italic;margin-bottom:14px;line-height:1.4}
 .case-list{list-style:none}
 .case-list li{font-size:13.5px;color:var(--muted-w);display:flex;gap:8px;margin-bottom:7px;line-height:1.4}
@@ -493,11 +492,11 @@ footer a:hover{color:var(--gold-l)}
     </div>
     <div class="case-grid">
       <div class="case-card reveal">
-        <div class="case-head">
-          <div class="case-avatar"><img src="img/cases/lovtseva.jpg" alt="Евгения Ловцева"></div>
-          <div><div class="case-name">Евгения Ловцева</div><div class="case-role">Эксперт по продаже ПВЗ на Ozon и Wildberries</div></div>
-        </div>
-        <div class="case-headline">Заключила сделку на 4 000 000 ₽ — благодаря личному бренду и продажам со сцены</div>
+        <div class="case-photo"><img src="img/cases/lovtseva.jpg" alt="Евгения Ловцева"></div>
+        <div class="case-body">
+          <div class="case-name">Евгения Ловцева</div>
+          <div class="case-role">Эксперт по продаже ПВЗ на Ozon и Wildberries</div>
+          <div class="case-headline">Заключила сделку на 4 000 000 ₽ — благодаря личному бренду и продажам со сцены</div>
         <ul class="case-list">
           <li>С нуля запустила Telegram-канал с чётким позиционированием</li>
           <li>Прошла интенсив «Медийность и деньги»</li>
@@ -506,13 +505,14 @@ footer a:hover{color:var(--gold-l)}
           <li>Заключила сделку на 4 000 000 ₽ на выступлении со сцены</li>
         </ul>
         <div class="case-quote">«Если бы я не проявилась — ничего этого бы не было! Мой бизнес вырос в разы с помощью Анны Ники!»</div>
+        </div>
       </div>
       <div class="case-card reveal">
-        <div class="case-head">
-          <div class="case-avatar"><img src="img/cases/galkova.jpg" alt="Ольга Галькова"></div>
-          <div><div class="case-name">Ольга Галькова</div><div class="case-role">Астролог</div></div>
-        </div>
-        <div class="case-headline">Стала экспертом телеканала «Домашний» — и астрологом, у которого очередь из клиентов</div>
+        <div class="case-photo"><img src="img/cases/galkova.jpg" alt="Ольга Галькова"></div>
+        <div class="case-body">
+          <div class="case-name">Ольга Галькова</div>
+          <div class="case-role">Астролог</div>
+          <div class="case-headline">Стала экспертом телеканала «Домашний» — и астрологом, у которого очередь из клиентов</div>
         <ul class="case-list">
           <li>Совершила переход из работы в правоохранительных органах в нишу астрологии</li>
           <li>Начала вести свой блог</li>
@@ -521,13 +521,14 @@ footer a:hover{color:var(--gold-l)}
           <li>Стала экспертом телеканала «Домашний»</li>
         </ul>
         <div class="case-quote">«Анна Ника и её команда помогли мне выйти на новый уровень!»</div>
+        </div>
       </div>
       <div class="case-card reveal">
-        <div class="case-head">
-          <div class="case-avatar"><img src="img/cases/aleon.jpg" alt="Людмила Алеон"></div>
-          <div><div class="case-name">Людмила Алеон</div><div class="case-role">Руководитель агентства недвижимости, тренер по КОЖ</div></div>
-        </div>
-        <div class="case-headline">Стала номинантом премии «Главные женщины РФ» — и успешно ведёт бизнес через личный бренд</div>
+        <div class="case-photo"><img src="img/cases/aleon.jpg" alt="Людмила Алеон"></div>
+        <div class="case-body">
+          <div class="case-name">Людмила Алеон</div>
+          <div class="case-role">Руководитель агентства недвижимости, тренер по КОЖ</div>
+          <div class="case-headline">Стала номинантом премии «Главные женщины РФ» — и успешно ведёт бизнес через личный бренд</div>
         <ul class="case-list">
           <li>Стала вести свои соцсети</li>
           <li>Стала номинантом премии «Главные женщины РФ»</li>
@@ -536,13 +537,14 @@ footer a:hover{color:var(--gold-l)}
           <li>Стала фотомоделью</li>
         </ul>
         <div class="case-quote">«Благодаря Анне Нике я стала номинантом премии "Главные женщины РФ". И мой бизнес благодаря личному бренду сегодня приносит мне стабильный доход!»</div>
+        </div>
       </div>
       <div class="case-card reveal">
-        <div class="case-head">
-          <div class="case-avatar"><img src="img/cases/chernyshova.jpg" alt="Юлия Чернышова"></div>
-          <div><div class="case-name">Юлия Чернышова</div><div class="case-role">Косметолог</div></div>
-        </div>
-        <div class="case-headline">Сменила нелюбимую работу в банке на своё дело — и запустила обучение косметологов</div>
+        <div class="case-photo"><img src="img/cases/chernyshova.jpg" alt="Юлия Чернышова"></div>
+        <div class="case-body">
+          <div class="case-name">Юлия Чернышова</div>
+          <div class="case-role">Косметолог</div>
+          <div class="case-headline">Сменила нелюбимую работу в банке на своё дело — и запустила обучение косметологов</div>
         <ul class="case-list">
           <li>Сменила нелюбимую работу в банке на любимую косметологию</li>
           <li>Упаковала личный бренд косметолога</li>
@@ -551,13 +553,14 @@ footer a:hover{color:var(--gold-l)}
           <li>Запустила своё обучение косметологов</li>
         </ul>
         <div class="case-quote">«Анна Ника дала мне инструменты, которые работают! Я поняла, как это работает, и двигаюсь дальше»</div>
+        </div>
       </div>
       <div class="case-card reveal">
-        <div class="case-head">
-          <div class="case-avatar"><img src="img/cases/savenko.jpg" alt="Ирина Савенко"></div>
-          <div><div class="case-name">Ирина Савенко</div><div class="case-role">Искусствовед-экскурсовод</div></div>
-        </div>
-        <div class="case-headline">Вышла из офлайна в онлайн с нуля — и выросла в масштабе и доходе на весь мир</div>
+        <div class="case-photo"><img src="img/cases/savenko.jpg" alt="Ирина Савенко"></div>
+        <div class="case-body">
+          <div class="case-name">Ирина Савенко</div>
+          <div class="case-role">Искусствовед-экскурсовод</div>
+          <div class="case-headline">Вышла из офлайна в онлайн с нуля — и выросла в масштабе и доходе на весь мир</div>
         <ul class="case-list">
           <li>Вышла из офлайн в онлайн с «0»</li>
           <li>Ведёт свои лекции и вебинары в прямых эфирах</li>
@@ -565,13 +568,14 @@ footer a:hover{color:var(--gold-l)}
           <li>Выросла в масштабе и доходе за счёт онлайн-пространства на весь мир</li>
         </ul>
         <div class="case-quote">«Раньше я боялась даже подумать про прямой эфир! Анна Ника научила меня зарабатывать онлайн!»</div>
+        </div>
       </div>
       <div class="case-card reveal">
-        <div class="case-head">
-          <div class="case-avatar"><img src="img/cases/yankovskaya.jpg" alt="Камилла Янковская"></div>
-          <div><div class="case-name">Камилла Янковская</div><div class="case-role">Эксперт в строительной сфере</div></div>
-        </div>
-        <div class="case-headline">Стала героиней глянцевых журналов — и получает предложения о рекламных съёмках</div>
+        <div class="case-photo"><img src="img/cases/yankovskaya.jpg" alt="Камилла Янковская"></div>
+        <div class="case-body">
+          <div class="case-name">Камилла Янковская</div>
+          <div class="case-role">Эксперт в строительной сфере</div>
+          <div class="case-headline">Стала героиней глянцевых журналов — и получает предложения о рекламных съёмках</div>
         <ul class="case-list">
           <li>Начала вести свой блог</li>
           <li>Стала блогером и фотомоделью</li>
@@ -579,13 +583,14 @@ footer a:hover{color:var(--gold-l)}
           <li>Стала героиней глянцевых журналов</li>
         </ul>
         <div class="case-quote">«Я была экспертом в строительной сфере и хотела быть блогером. Я им стала, и теперь это даёт мне энергию и хороший доход.»</div>
+        </div>
       </div>
       <div class="case-card reveal">
-        <div class="case-head">
-          <div class="case-avatar"><img src="img/cases/shulaeva.jpg" alt="Татьяна Шулаева"></div>
-          <div><div class="case-name">Татьяна Шулаева</div><div class="case-role">Фотомодель, художник, актриса</div></div>
-        </div>
-        <div class="case-headline">Начала получать приглашения на киносъёмки — и открыла свою творческую мастерскую</div>
+        <div class="case-photo"><img src="img/cases/shulaeva.jpg" alt="Татьяна Шулаева"></div>
+        <div class="case-body">
+          <div class="case-name">Татьяна Шулаева</div>
+          <div class="case-role">Фотомодель, художник, актриса</div>
+          <div class="case-headline">Начала получать приглашения на киносъёмки — и открыла свою творческую мастерскую</div>
         <ul class="case-list">
           <li>Начала вести свой блог</li>
           <li>Стала фотомоделью</li>
@@ -594,13 +599,14 @@ footer a:hover{color:var(--gold-l)}
           <li>Открыла свою творческую мастерскую</li>
         </ul>
         <div class="case-quote">«С Анной Никой я прошла путь от человека, который обнулился и не знал, что делать, до блогера, актрисы и владелицы собственной творческой мастерской. Этого бы не было, если бы не моя работа над личным брендом.»</div>
+        </div>
       </div>
       <div class="case-card reveal">
-        <div class="case-head">
-          <div class="case-avatar"><img src="img/cases/usoltseva.jpg" alt="Лариса Усольцева"></div>
-          <div><div class="case-name">Лариса Усольцева</div><div class="case-role">Директор оконной компании «ПМК Мастер»</div></div>
-        </div>
-        <div class="case-headline">Привлекла ключевого клиента в первый месяц сотрудничества — благодаря личному бренду и работе в соцсетях</div>
+        <div class="case-photo"><img src="img/cases/usoltseva.jpg" alt="Лариса Усольцева"></div>
+        <div class="case-body">
+          <div class="case-name">Лариса Усольцева</div>
+          <div class="case-role">Директор оконной компании «ПМК Мастер»</div>
+          <div class="case-headline">Привлекла ключевого клиента в первый месяц сотрудничества — благодаря личному бренду и работе в соцсетях</div>
         <ul class="case-list">
           <li>Выстроила стратегию личного бренда и позиционирования</li>
           <li>Настроила работу в социальных сетях</li>
@@ -608,6 +614,7 @@ footer a:hover{color:var(--gold-l)}
           <li>Привлекла ключевого клиента компании уже в первый месяц работы</li>
         </ul>
         <div class="case-quote">«Я и не думала, что столько людей мной интересуется! Инвестиции в работу с Анной окупились быстро и многократно.»</div>
+        </div>
       </div>
     </div>
   </div>
