@@ -275,6 +275,19 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 32px;display:f
 .closing-sign{margin-top:28px;font-family:'Caveat',cursive;font-weight:700;font-size:28px;color:var(--gold-l)}
 .closing-confirm{display:none;max-width:480px;margin:34px auto 0;padding:18px 28px;background:rgba(212,169,71,.08);border:1.5px solid rgba(212,169,71,.3);border-radius:4px;font-family:'Inter',system-ui,sans-serif;font-size:14.5px;color:var(--muted-w)}
 .closing-confirm.show{display:block}
+.blog{padding:110px 0;background:var(--black-2);color:#fff}
+.blog-head{text-align:center;max-width:640px;margin:0 auto 56px}
+.blog-head h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3.4vw,38px);margin-top:16px}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.blog-card{background:var(--black-3);border:1px solid var(--border-w);border-radius:6px;overflow:hidden;text-decoration:none;color:inherit;display:block;transition:transform .2s}
+.blog-card:hover{transform:translateY(-4px)}
+.blog-card-img{aspect-ratio:4/3;overflow:hidden;background:var(--black)}
+.blog-card-img img{width:100%;height:100%;object-fit:cover;object-position:50% 15%;display:block}
+.blog-card-body{padding:22px 24px 26px}
+.blog-card-title{font-family:'Playfair Display',serif;font-size:18px;font-weight:800;color:#fff;line-height:1.35;margin-bottom:10px}
+.blog-card-excerpt{font-size:13.5px;color:var(--muted-w);line-height:1.55;margin-bottom:16px}
+.blog-card-link{font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--gold-l)}
+@media(max-width:900px){.blog-grid{grid-template-columns:1fr}}
 footer{background:var(--black);color:rgba(255,255,255,.35);padding:28px 0;text-align:center;font-size:12.5px;border-top:1px solid var(--border-w)}
 footer a{color:var(--gold);text-decoration:none}
 footer a:hover{color:var(--gold-l)}
@@ -841,6 +854,41 @@ footer a:hover{color:var(--gold-l)}
     <div class="closing-title">«Человек, у которого прокачан личный бренд, <em class="gold-grad">никогда не будет бедным</em>»</div>
     <div class="closing-sign">Анна Ника Гулева</div>
     <div class="closing-confirm" id="closingConfirm">✦ Ваша заявка принята — проверьте указанную вами почту</div>
+  </div>
+</section>
+
+<section class="blog">
+  <div class="si">
+    <div class="blog-head reveal">
+      <div class="eyebrow" style="justify-content:center">Блог</div>
+      <h2>Почитать перед тем, как решиться</h2>
+    </div>
+    <div class="blog-grid">
+      <a href="kak-stat-izvestnym-ekspertom.html" class="blog-card reveal">
+        <div class="blog-card-img"><img src="img/blog/article-1.jpg" alt="Как стать известным экспертом, если вы не блогер"></div>
+        <div class="blog-card-body">
+          <div class="blog-card-title">Как стать известным экспертом, если вы не блогер и не хотите им быть</div>
+          <div class="blog-card-excerpt">Известность и компетентность — две разные вещи. Разбираем, с чего она реально начинается.</div>
+          <div class="blog-card-link">Читать →</div>
+        </div>
+      </a>
+      <a href="s-chego-nachat-lichnyj-brend.html" class="blog-card reveal">
+        <div class="blog-card-img"><img src="img/blog/article-2.jpg" alt="С чего начать личный бренд опытному специалисту"></div>
+        <div class="blog-card-body">
+          <div class="blog-card-title">С чего начать личный бренд, если вы уже опытный специалист</div>
+          <div class="blog-card-excerpt">Личный бренд начинается не с соцсетей. Четыре шага, без которых контент будет случайным.</div>
+          <div class="blog-card-link">Читать →</div>
+        </div>
+      </a>
+      <a href="pochemu-klienty-vas-ne-nahodyat.html" class="blog-card reveal">
+        <div class="blog-card-img"><img src="img/blog/article-3.jpg" alt="Почему клиенты вас не находят, хотя вы отличный специалист"></div>
+        <div class="blog-card-body">
+          <div class="blog-card-title">Почему клиенты вас не находят, хотя вы отличный специалист</div>
+          <div class="blog-card-excerpt">Пять причин, по которым новые клиенты не доходят даже до сильных экспертов.</div>
+          <div class="blog-card-link">Читать →</div>
+        </div>
+      </a>
+    </div>
   </div>
 </section>
 
