@@ -246,6 +246,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 32px;display:f
 .form-consent input[type=checkbox]{width:16px;height:16px;min-width:16px;margin-top:2px;accent-color:var(--gold);cursor:pointer}
 .form-consent a{color:var(--gold-l);text-decoration:underline}
 .form-consent a:hover{color:var(--gold)}
+.anketa-gift{background:rgba(212,169,71,.08);border:1.5px solid rgba(212,169,71,.3);border-radius:4px;padding:20px 22px;text-align:center;margin-bottom:26px}
+.anketa-gift-label{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:var(--gold-l);margin-bottom:6px}
+.anketa-gift-text{font-size:13.5px;color:var(--muted-w);line-height:1.5}
+.modal-gift{background:rgba(212,169,71,.08);border:1.5px solid rgba(212,169,71,.3);border-radius:4px;padding:20px 22px;margin-top:22px;text-align:left}
+.modal-gift-label{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:var(--gold-l);margin-bottom:6px}
+.modal-gift-text{font-size:13.5px;color:var(--muted-w);line-height:1.5}
 .tariff-cloud{display:flex;flex-wrap:wrap;gap:8px}
 .tariff-tag{position:relative;cursor:pointer}
 .tariff-tag input{position:absolute;opacity:0;width:0;height:0}
@@ -729,6 +735,10 @@ footer a:hover{color:var(--gold-l)}
     </div>
     <div class="form-card reveal">
       <div id="formDefault">
+        <div class="anketa-gift reveal">
+          <div class="anketa-gift-label">🎁 Заполни форму и получи подарок</div>
+          <div class="anketa-gift-text">Чек-лист «Как распаковать свою уникальность с помощью ИИ. 10 важных промтов»</div>
+        </div>
         <form id="mdForm">
           <div class="form-two">
             <div class="form-row">
@@ -750,9 +760,15 @@ footer a:hover{color:var(--gold-l)}
               <input type="text" name="telegram" placeholder="@username">
             </div>
           </div>
-          <div class="form-row">
-            <label>Промокод</label>
-            <input type="text" name="promo" placeholder="Если есть">
+          <div class="form-two">
+            <div class="form-row">
+              <label>Email *</label>
+              <input type="email" name="email" required placeholder="you@example.com">
+            </div>
+            <div class="form-row">
+              <label>Промокод</label>
+              <input type="text" name="promo" placeholder="Если есть">
+            </div>
           </div>
           <div class="form-row">
             <label>Чем вы занимаетесь? *</label>
@@ -789,7 +805,10 @@ footer a:hover{color:var(--gold-l)}
         <div class="check">✦</div>
         <h3 style="font-family:'Playfair Display',serif">Заявка получена</h3>
         <p style="color:var(--muted-w);font-size:14px;margin-top:10px">Отвечу лично в ближайшее время. Ответ придёт вам на почту — проверьте.</p>
-        <a href="https://t.me/annanika_life" target="_blank" rel="noopener" class="btn-gold" style="margin-top:24px;display:inline-flex">Подписаться на Telegram-канал →</a>
+        <div class="modal-gift">
+          <div class="modal-gift-label">🎁 Зайдите на почту</div>
+          <div class="modal-gift-text">Там вас уже ждёт подарок — чек-лист «Как распаковать свою уникальность с помощью ИИ. 10 важных промтов»</div>
+        </div>
       </div>
     </div>
   </div>
