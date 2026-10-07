@@ -281,7 +281,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 32px;display:f
 .blog{padding:110px 0;background:var(--black-2);color:#fff}
 .blog-head{text-align:center;max-width:640px;margin:0 auto 56px}
 .blog-head h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3.4vw,38px);margin-top:16px}
-.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
 .blog-card{background:var(--black-3);border:1px solid var(--border-w);border-radius:6px;overflow:hidden;text-decoration:none;color:inherit;display:block;transition:transform .2s}
 .blog-card:hover{transform:translateY(-4px)}
 .blog-card-img{aspect-ratio:4/3;overflow:hidden;background:var(--black)}
@@ -895,6 +895,14 @@ footer a:hover{color:var(--gold-l)}
         <div class="blog-card-body">
           <div class="blog-card-title">Почему клиенты вас не находят, хотя вы отличный специалист</div>
           <div class="blog-card-excerpt">Пять причин, по которым новые клиенты не доходят даже до сильных экспертов.</div>
+          <div class="blog-card-link">Читать →</div>
+        </div>
+      </a>
+      <a href="kak-stat-blogerom-esli-vy-ekspert.html" class="blog-card reveal">
+        <div class="blog-card-img"><img src="img/blog/article-4.jpg" alt="Как стать блогером, если вы эксперт"></div>
+        <div class="blog-card-body">
+          <div class="blog-card-title">Как стать блогером, если вы эксперт</div>
+          <div class="blog-card-excerpt">Блогеру-эксперту не нужно становиться шоуменом — нужно научиться делиться тем, что вы и так знаете.</div>
           <div class="blog-card-link">Читать →</div>
         </div>
       </a>
