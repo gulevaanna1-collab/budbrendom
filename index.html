@@ -34,6 +34,7 @@
 {
   "@context": "https://schema.org",
   "@type": "Person",
+  "@id": "https://budbrendom.ru/#anna",
   "name": "Анна Ника Гулева",
   "alternateName": ["Анна Ника", "Anna Nika Guleva"],
   "jobTitle": "Медиастратег, продюсер личных брендов, AI-интегратор",
@@ -103,6 +104,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 32px;display:f
 .nav-logo{display:flex;align-items:center;gap:10px;color:#fff;font-family:'Playfair Display',serif;font-weight:800;font-size:14px;letter-spacing:.3px}
 .nav-crown{color:var(--gold)}
 .nav-cta{padding:11px 24px;color:var(--black);border-radius:2px;font-size:12.5px;font-weight:700;text-decoration:none;letter-spacing:.5px;text-transform:uppercase;transition:filter .2s}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-link{color:var(--gold-l);font-size:12.5px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;text-decoration:none}
+.nav-link:hover{color:#fff}
+@media(max-width:600px){.nav-link{display:none}}
 
 /* HERO */
 .hero{background:var(--black);color:#fff;padding:150px 0 0;position:relative;overflow:hidden}
@@ -340,7 +345,10 @@ footer a:hover{color:var(--gold-l)}
 
 <nav>
   <div class="nav-logo"><span class="nav-crown">✦</span> АКАДЕМИЯ «БУДЬ БРЕНДОМ»</div>
-  <a href="#form" class="nav-cta">Записаться</a>
+  <div class="nav-links">
+    <a href="blog/" class="nav-link">Блог</a>
+    <a href="#form" class="nav-cta">Записаться</a>
+  </div>
 </nav>
 
 <section class="hero">
@@ -912,7 +920,7 @@ footer a:hover{color:var(--gold-l)}
 
 <footer>
   <div class="si footer-inner">
-    <div class="footer-row">Медийность и деньги · Анна Ника Гулева · <a href="https://t.me/annanika777" target="_blank" rel="noopener">Задать вопрос →</a></div>
+    <div class="footer-row">Медийность и деньги · Анна Ника Гулева · <a href="blog/">Блог</a> · <a href="https://t.me/annanika777" target="_blank" rel="noopener">Задать вопрос →</a></div>
     <div class="footer-legal">ИП Колоднова А.А. · ИНН 230307821844 · ОГРНИП 324237500531144 · <a href="oferta.html">Договор оферты</a> · <a href="privacy.html">Политика конфиденциальности</a></div>
   </div>
 </footer>
