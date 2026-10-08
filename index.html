@@ -296,6 +296,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 32px;display:f
 .blog-card-excerpt{font-size:13.5px;color:var(--muted-w);line-height:1.55;margin-bottom:16px}
 .blog-card-link{font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--gold-l)}
 @media(max-width:900px){.blog-grid{grid-template-columns:1fr}}
+.social{padding:100px 0;background:var(--black);color:#fff;text-align:center}
+.social-head{max-width:560px;margin:0 auto 48px}
+.social-head h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3.4vw,36px);margin-top:16px}
+.social-grid{display:flex;justify-content:center;gap:28px;flex-wrap:wrap}
+.social-card{display:inline-flex;flex-direction:column;align-items:center;gap:14px;background:var(--black-3);border:1px solid var(--border-w);border-radius:8px;padding:28px 32px;text-decoration:none;color:#fff;transition:transform .2s,border-color .2s;width:220px}
+.social-card:hover{transform:translateY(-4px);border-color:var(--gold)}
+.social-qr{width:140px;height:140px;border-radius:6px;display:block}
+.social-card-label{display:flex;align-items:center;gap:8px;font-family:'Playfair Display',serif;font-weight:800;font-size:15px;color:var(--gold-l)}
+.social-card-label svg{width:18px;height:18px;flex-shrink:0}
+.social-card-handle{font-size:13px;color:var(--muted-w)}
+@media(max-width:600px){.social-grid{gap:20px}}
 footer{background:var(--black);color:rgba(255,255,255,.35);padding:28px 0;text-align:center;font-size:12.5px;border-top:1px solid var(--border-w)}
 footer a{color:var(--gold);text-decoration:none}
 footer a:hover{color:var(--gold-l)}
@@ -913,6 +924,27 @@ footer a:hover{color:var(--gold-l)}
           <div class="blog-card-excerpt">Блогеру-эксперту не нужно становиться шоуменом — нужно научиться делиться тем, что вы и так знаете.</div>
           <div class="blog-card-link">Читать →</div>
         </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="social">
+  <div class="si">
+    <div class="social-head reveal">
+      <div class="eyebrow" style="justify-content:center">Будь на связи</div>
+      <h2>Подписывайся</h2>
+    </div>
+    <div class="social-grid">
+      <a href="https://www.instagram.com/annanika_life" target="_blank" rel="noopener" class="social-card reveal">
+        <img src="img/qr-instagram.png" alt="QR-код на Instagram Анны Ники Гулевой" class="social-qr">
+        <div class="social-card-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg> Instagram</div>
+        <div class="social-card-handle">@annanika_life</div>
+      </a>
+      <a href="https://t.me/annanika_life" target="_blank" rel="noopener" class="social-card reveal">
+        <img src="img/qr-telegram.png" alt="QR-код на Telegram-канал Анны Ники Гулевой" class="social-qr">
+        <div class="social-card-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg> Telegram-канал</div>
+        <div class="social-card-handle">@annanika_life</div>
       </a>
     </div>
   </div>
