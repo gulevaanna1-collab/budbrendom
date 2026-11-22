@@ -366,6 +366,29 @@ footer a:hover{color:var(--gold-l)}
 .cohort-book{justify-content:center;text-align:center;max-width:100%}
 @media(max-width:680px){.cohort-start{padding:64px 0}.cohort-calendar{grid-template-columns:1fr;gap:14px}.cohort-week{padding:22px}.cohort-book{width:100%;padding:18px 20px}}
 
+
+/* Payment instructions */
+.payment-trigger{font-family:inherit;cursor:pointer}
+nav .payment-trigger{border:0}
+.payment-dialog{border:1px solid var(--border);border-radius:12px;background:var(--black-2);color:#fff;width:min(620px,calc(100% - 28px));max-height:calc(100dvh - 36px);overflow-y:auto;padding:32px;margin:auto}
+.payment-dialog::backdrop{background:rgba(0,0,0,.76)}
+.payment-close{display:block;margin:0 0 16px auto;border:1px solid var(--border-w);border-radius:4px;background:transparent;color:#fff;padding:8px 14px;font:inherit;font-size:14px;cursor:pointer}
+.payment-dialog h2{font-size:clamp(25px,4vw,34px);line-height:1.2;margin-bottom:16px}
+.payment-dialog p{font-size:16px;line-height:1.6;margin-bottom:16px}
+.payment-prices{list-style:none;margin:20px 0;padding:16px 20px;border:1px solid var(--border);display:grid;gap:8px;font-size:16px}
+.payment-dialog label{font-size:16px}
+.payment-dialog select{display:block;width:100%;padding:12px;margin:8px 0 18px;background:#fff;color:#141414;border:1px solid var(--gold);border-radius:4px;font:inherit}
+.payment-options{border:0;margin:0 0 18px;padding:0;display:grid;gap:10px}
+.payment-options legend{font-size:16px;font-weight:600;margin-bottom:10px}
+.payment-options label{display:flex;gap:10px;align-items:flex-start;cursor:pointer}
+.payment-options input{margin-top:6px;accent-color:var(--gold)}
+.payment-amount{padding:18px;background:rgba(212,169,71,.12);border-left:3px solid var(--gold);margin-bottom:18px}
+.payment-amount strong{color:var(--gold-l);font-size:24px}
+.payment-dialog .payment-note{font-size:14px;color:var(--muted-w)}
+.payment-dialog .payment-link{display:flex;justify-content:center;text-align:center;width:100%;margin:20px 0 14px}
+.payment-dialog a:not(.payment-link){color:var(--gold-l)}
+@media(max-width:600px){.payment-dialog{padding:22px}.pricing .payment-trigger{padding:16px 18px;font-size:12px;line-height:1.5;text-align:center;justify-content:center}}
+
 </style>
 </head>
 <body>
@@ -374,7 +397,7 @@ footer a:hover{color:var(--gold-l)}
   <div class="nav-logo"><span class="nav-crown">✦</span> АКАДЕМИЯ «БУДЬ БРЕНДОМ»</div>
   <div class="nav-links">
     <a href="blog/" class="nav-link">Блог</a>
-    <a href="#form" class="nav-cta">Записаться</a>
+    <button type="button" class="nav-cta payment-trigger" data-payment-tariff="">Записаться</button>
   </div>
 </nav>
 
@@ -390,7 +413,7 @@ footer a:hover{color:var(--gold-l)}
         <div class="hero-proof-n">4 миллиона рублей</div>
         <div class="hero-proof-l">Студентка «Медийность & Деньги» заключила сделку на 4 000 000 ₽ прямо со сцены — с личным брендом, построенным с нуля.</div>
       </div>
-      <div><a href="#form" class="btn-gold">Записаться на интенсив →</a></div>
+      <div><button type="button" class="btn-gold payment-trigger" data-payment-tariff="">Записаться на интенсив</button></div>
     </div>
     <div class="hero-img-wrap reveal">
       <img src="img/hero.jpg" alt="Анна Ника Гулева — медиастратег и телеведущая, автор интенсива «Медийность и деньги»">
@@ -685,7 +708,7 @@ footer a:hover{color:var(--gold-l)}
       <li class="cohort-week"><h3>Неделя 6 · 1–7 февраля</h3><p><strong>Выступления и дальнейшее продвижение.</strong> Подготовим структуру публичного выступления и соберём личный план развития бренда на следующие 90 дней.</p></li>
     </ol>
     <p class="cohort-result"><strong>Итог программы:</strong> понятное позиционирование, оформленные основные площадки, материалы для продвижения и последовательный план действий.</p>
-    <a class="btn-gold cohort-book" href="#form">Забронировать место в программе</a>
+    <button type="button" class="btn-gold cohort-book payment-trigger" data-payment-tariff="">Забронировать место в программе</button>
   </div>
 </section>
 
@@ -762,7 +785,7 @@ footer a:hover{color:var(--gold-l)}
           <li>Поддержка в чате — 1 месяц</li>
         </ul>
         <div class="price-for">«Я хочу пройти программу и получить результат. Сам. В своём темпе»</div>
-        <a href="#form" class="btn-gold-outline">Выбрать →</a>
+        <button type="button" class="btn-gold-outline payment-trigger" data-payment-tariff="Стандарт">Оплатить или внести предоплату</button>
       </div>
       <div class="price-card featured reveal">
         <div class="price-badge">Популярный</div>
@@ -775,7 +798,7 @@ footer a:hover{color:var(--gold-l)}
           <li>Участие в ток-шоу «Чашка кофе с интересным человеком»</li>
         </ul>
         <div class="price-for">«Я хочу не только пройти, но и получить личную проработку»</div>
-        <a href="#form" class="btn-gold">Выбрать →</a>
+        <button type="button" class="btn-gold payment-trigger" data-payment-tariff="Бизнес">Оплатить или внести предоплату</button>
       </div>
       <div class="price-card reveal">
         <div class="price-name">ВИП</div>
@@ -788,7 +811,7 @@ footer a:hover{color:var(--gold-l)}
           <li>Участие в ток-шоу «Чашка кофе с интересным человеком»</li>
         </ul>
         <div class="price-for">«Я хочу сделать свой бренд вместе с Анной Никой. На новом уровне»</div>
-        <a href="#form" class="btn-gold-outline">Выбрать →</a>
+        <button type="button" class="btn-gold-outline payment-trigger" data-payment-tariff="ВИП">Оплатить или внести предоплату</button>
       </div>
     </div>
     <div class="price-vip-note reveal">Выпускники тарифа ВИП получают приоритетную запись на «КОД МЕДИА» — персональный лендинг эксперта.</div>
@@ -1026,5 +1049,60 @@ var io=new IntersectionObserver(function(entries){
 },{threshold:.1});
 revealEls.forEach(function(el){io.observe(el);});
 </script>
+
+<dialog class="payment-dialog" id="paymentDialog" aria-labelledby="payment-title">
+  <button class="payment-close" type="button" id="paymentClose">Закрыть</button>
+  <h2 id="payment-title">Оплата программы «Медийность и деньги»</h2>
+  <p>Вы можете оплатить выбранный тариф полностью или забронировать место, внеся предоплату <b>5 000 ₽</b>.</p>
+  <ul class="payment-prices">
+    <li><b>Стандарт — 49 900 ₽</b></li>
+    <li><b>Бизнес — 69 900 ₽</b></li>
+    <li><b>ВИП — 99 900 ₽</b></li>
+    <li>Предоплата за любой тариф — <b>5 000 ₽</b></li>
+  </ul>
+  <label for="paymentTariff">Ваш тариф</label>
+  <select id="paymentTariff"><option value="49900">Стандарт — 49 900 ₽</option><option value="69900">Бизнес — 69 900 ₽</option><option value="99900">ВИП — 99 900 ₽</option></select>
+  <fieldset class="payment-options"><legend>Как вы хотите оплатить?</legend>
+    <label><input type="radio" name="paymentMode" value="full" checked>Оплатить тариф полностью</label>
+    <label><input type="radio" name="paymentMode" value="deposit">Внести предоплату 5 000 ₽</label>
+  </fieldset>
+  <div class="payment-amount" aria-live="polite">
+    На странице Т-Банка введите сумму <strong id="paymentAmount">49 900 ₽</strong>.
+    <p id="paymentBalance" style="margin:10px 0 0"></p>
+  </div>
+  <p><b>Сумму нужно ввести самостоятельно.</b> Выбор на сайте не подставляет её автоматически на странице Т-Банка.</p>
+  <p class="payment-note">Предоплата входит в стоимость программы. Срок внесения оставшейся суммы согласуйте с Анной Никой до оплаты.</p>
+  <p class="payment-note">Перед оплатой ознакомьтесь с <a href="oferta.html" target="_blank" rel="noopener">договором оферты</a> и <a href="privacy.html" target="_blank" rel="noopener">политикой конфиденциальности</a>.</p>
+  <a class="btn-gold payment-link" href="https://paylink.tbank-online.com/71b600c6-51b8-4484-9ea7-889dc5307a35" target="_blank" rel="noopener noreferrer">Перейти к оплате в Т-Банке</a>
+  <p class="payment-note">Если ещё не заполняли анкету, <a href="#form" id="paymentFormLink">оставьте заявку</a>, чтобы я могла связаться с вами.</p>
+</dialog>
+<script>
+(function(){
+  var dialog=document.getElementById('paymentDialog');
+  var tariff=document.getElementById('paymentTariff');
+  var opener=null;
+  function rub(value){return value.toLocaleString('ru-RU')+' ₽';}
+  function refreshPayment(){
+    var price=Number(tariff.value);
+    var deposit=dialog.querySelector('input[name="paymentMode"]:checked').value==='deposit';
+    document.getElementById('paymentAmount').textContent=rub(deposit?5000:price);
+    document.getElementById('paymentBalance').textContent=deposit?'После предоплаты останется доплатить '+rub(price-5000)+'.':'Полная оплата выбранного тарифа.';
+  }
+  document.querySelectorAll('.payment-trigger').forEach(function(button){
+    button.addEventListener('click',function(){
+      opener=button;
+      var prices={'Стандарт':'49900','Бизнес':'69900','ВИП':'99900'};
+      if(prices[button.dataset.paymentTariff])tariff.value=prices[button.dataset.paymentTariff];
+      dialog.querySelector('input[value="full"]').checked=true;
+      refreshPayment();dialog.showModal();
+    });
+  });
+  dialog.addEventListener('change',refreshPayment);
+  document.getElementById('paymentClose').addEventListener('click',function(){dialog.close();});
+  document.getElementById('paymentFormLink').addEventListener('click',function(){dialog.close();});
+  dialog.addEventListener('close',function(){if(opener)opener.focus();});
+})();
+</script>
+
 </body>
 </html>
